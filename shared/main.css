@@ -8,6 +8,10 @@
    --lightest-border:#e2e2e2;
    --white-color:#fff;
    --footer-bg:#ededed;
+   --general-space: 61vw;
+   --general-space-desktop:80vw;
+   --general-space-tablet:90vw;
+   --general-space-mobile:95vw;
 }
 @font-face {
 	font-family: 'Montserrat';
@@ -72,15 +76,36 @@ a{
 	align-items: center;
 	justify-content: end;
 }
-.d-start{
-	display: flex;
-	align-items: center;
-	justify-content: start;
-}
 .d-between{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+}
+.general-button{
+	border: none;
+	background-color: transparent;
+}
+.general-button p{
+	color: var(--primary-color);
+	font-family: 'Montserrat Alternates';
+	font-weight: 600;
+	font-size: 15px;
+	position: relative;
+}
+.general-button p::after{
+	content:'';
+	display: inline;
+	background-image: url('/assets/image/right-arrow.png');
+	background-size: cover;
+	position: absolute;
+	width: 18px;
+	height:18px;
+	color: var(--secondary-color);
+    top: 50%;
+    transform: translateY(-50%);
+}
+.inner-section{
+	width: var(--general-space);
 }
 .school-header__text--top-text,.school-header__text--bottom-text,.footer-information__logo .top,.footer-information__logo .bottom,.parallax-bottom-text{
 	font-family: 'Minion Pro', sans-serif;
@@ -90,10 +115,6 @@ a{
 .toolbar{
 	border-bottom: 1px solid var(--light-border);
 }
-.inner-section{
-	width: 90%;
-}
-
 .toolbar-categories__item{
 	padding: 10px 24px;
 	border-left: 1px solid var(--light-border);
@@ -132,19 +153,19 @@ a{
 	margin-right: 5px;
 }
 .school-header{
-	padding: 10px 5% 0px;
+	padding-top:10px;
 }
 .school-outer-frame{
-	height: 184px;
+	width: 80.5%;
+	height: 212px;
 	background-image: url('/assets/image/jacksonville-bg.png');
 	background-size: contain;
 	background-repeat: no-repeat;
+	background-position: center;
 }
 .school-header__logo{
-	/* width: 170px;
-	height: 170px; */
-	width: 150px;
-	height: 150px;
+	width: 164px;
+	height: 164px;
 	background-image: url('/assets/image/logo.png');
 	background-size: cover;
 }
@@ -155,6 +176,7 @@ a{
 .school-header__text--top-text{
 	font-size: 100px;
 	text-align: right;
+	line-height: 80px;
 	color: var(--primary-color);
 
 }
@@ -175,9 +197,14 @@ nav{
 	border-radius: 50%;
 }
 .categories__item{
-	padding: 0px 45px 0px 45px;
-	height: 55px;
-	
+	padding: 0px 36px 0px 36px;
+	height: 55px;	
+}
+.categories__item:first-child{
+	padding-left: 0px;
+}
+.categories__item:last-child{
+	padding-right: 0px;
 }
 .categories__item a{
 	position: relative;
@@ -185,6 +212,8 @@ nav{
 	height: 100%;
 	display: grid;
     place-items: center;
+	font-size: 20px;
+	text-wrap: nowrap;
 }
 .categories__item a::after{
 	content: '';
@@ -202,8 +231,10 @@ nav{
 	transform: scaleX(1);
 	transform-origin: bottom left;
 }
+/** Header Section END **/
 
-/** MAIN **/
+/* MAIN */
+/** Hero Section **/
 #hero-banner{
 	height: calc((745 / 1800) * 100vw);
 	width: 100%;
@@ -213,13 +244,13 @@ nav{
 	background-position: bottom;
 	border-bottom: 4px solid var(--secondary-color);
 }
-#quick-links .inner-section{
-	width: 73%;
-}
+/** Hero Section END **/
+
+/** QuickLinks Section **/
 .quick-links-container{
 	background-color: var(--white-color);
 	border-top: 4px solid var(--secondary-color);
-	padding: 25px;
+	padding: 40px;
 	margin-top: -100px;
 }
 .quick-links__item{
@@ -262,16 +293,19 @@ nav{
 	font-size:16px;
 	text-wrap: nowrap;
 }
-/* EVENTS */
+/** QuickLinks Section END **/
+
+/** Events Section **/
 #news-and-events .inner-section{
-	width: 75%;
+	margin-top: 34px;
 	display: flex;
 	gap: 70px;
+	padding: 40px;
 }
 .events,.news{
 	width: 48%;
 }
-.events h2,.events-list__item--date .tt,.events-list__item--date .bt,.events-list__item--header, .news h2,.news-item__header,.album-header,.album-boxes__item--text,.video-box__text-part--header,.quick-links__item-header--text,.categories__item a,.footer-information__address-phone .info{
+.events-header,.events-list__item--date .tt,.events-list__item--date .bt,.events-list__item--header, .news-header,.news-item__header,.album-header,.album-boxes__item--text,.video-box__text-part--header,.quick-links__item-header--text,.categories__item a,.footer-information__address-phone .info{
 	font-family: 'Montserrat Alternates', sans-serif;
 	font-weight: 600;
 }
@@ -279,13 +313,16 @@ nav{
 	font-family: 'Montserrat',sans-serif;
 	font-weight: 400;
 }
-.events h2, .news h2{
+.events-header, .news-header,.album-header{
+	margin-top: 0;
+}
+.events-header, .news-header,.album-header{
 	font-size: 36px;
 	color:var(--primary-color);
-	text-align: center;
+	text-align: left;
 }
-.news h2{
-	text-align:left ;
+.events-header{
+	margin-left: 50px;
 }
 .events-list__item{
 	display: flex;
@@ -314,7 +351,8 @@ nav{
 .events-list__item--header{
 	font-size: 19px;
 	line-height: 21px;
-	color:var(--primary-color)
+	color:var(--primary-color);
+	margin: 0;
 }
 .events-list__item--time{
 	font-size:16px;
@@ -324,18 +362,17 @@ nav{
 	display: flex;
 	align-items: start;
 	flex-direction: column;
+	width: 80%;
 }
-.events button{
-	color:var(--primary-color);
-	border: none;
-	background-color: transparent;
+.events .general-button:first-child{
+	margin-right: 20px;
 }
 .news-item{
 	display: flex;
 	width: 100%;
 }
 .news-item-text-part{
-	width: 55%;
+	width: 60%;
 	display:flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -348,8 +385,8 @@ nav{
 	flex-direction: column;
 }
 .news-item__img{
-	width: 40%;
-	height: 140px;
+	width: 195px;
+	aspect-ratio: 1 / 0.71;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -376,12 +413,11 @@ nav{
 	margin: 20px 0;
 }
 .news button{
-	color: var(--primary-color);
-	font-size: 16px;
-	line-height: 30px;
-	border: none;
-	background-color: transparent;
+	padding: 0;
 }
+/** Events Section END **/
+
+/** Parallax Section **/
 #parallax{
 	height: calc((645 / 1800) * 100vw);
 	width: 100%;
@@ -413,33 +449,27 @@ nav{
 	text-transform:uppercase;
 	text-align: center;
 }
+/** Parallax Section END **/
+
+/** Album Section **/
 #album .inner-section{
-	/* width: 40%; */
-	width: 50%;
+	width: 40%;
 }
-.album-header{
-	font-size: 36px;
-	color:var(--primary-color);
-}
-.album-boxes{
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
+#album{
+	margin-top: 64px;
+	margin-bottom: 55px;
 }
 .album-boxes__item{
-	width: 320px;
-	aspect-ratio: 1 / 0.9;
+	width: 340px;
+	height: 310px;
 	border: 1px solid var(--lightest-border);
 	padding: 0;
 	background-color: var(--white-color);
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	flex-direction: column;
 }
 .album-boxes__item--img{
 	width: 100%;
-	height: 87%;
+	height: 80%;
 	background-size: cover;
 }
 .album-boxes__item:nth-child(1) .album-boxes__item--img{
@@ -454,40 +484,38 @@ nav{
 	line-height: 26px;
 	color:var(--primary-color);
 }
-#video .inner-section{
-	width: 75%;
-}
+/** Album Section END **/
+
+/** Video Section **/
 .video-box{
 	background-color: var(--primary-color);
-	height: 370px;
+	height: 410px;
 }
 .video-box__text-part{
-	width: 35%;
-	height: 100%;
+	width: 32%;
+	height: 80%;
 	padding: 30px;
 	color: var(--white-color);
 	display: flex;
 	align-items: start;
-	justify-content: space-evenly;
+	justify-content: space-between;
 	flex-direction: column;
 }
-.video-box__text-part h2{
+.video-box__text-part--header{
 	font-size: 36px;
 }
-.video-box__text-part p{
+.video-box__text-part--text{
 	font-family: 'Montserrat Alternates';
 	font-weight: 500;
 	font-size: 19px;
 	line-height: 26px;
 }
-.video-box__text-part button{
-    border: none;
-	background-color: transparent;
-	font-size: 17px;	
+.video-box__text-part .general-button p{
+	color: var(--white-color);
 }
 .video-box__video-part{
 	position: relative;
-	width: 65%;
+	width: 75%;
 	height: 100%;
 }
 .video-box__video-part--video{
@@ -503,6 +531,7 @@ nav{
 	background-color: transparent;
 	border: none;
 }
+/** Video Section END **/
 
 /* FOOTER */
 #footer{
@@ -569,10 +598,7 @@ nav{
 }
 .footer-powered-by{
 	background-color: var(--footer-bg);
-	padding: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	height: 40px;
 	flex-direction: column;
 }
 .footer-powered-by .powered-by-text{
@@ -586,3 +612,4 @@ nav{
 	width: 184px;
 	height: 9px;
 }
+/* FOOTER END */

@@ -51,7 +51,7 @@
       <div id="news-and-events" class=" d-center">
         <div class="inner-section">
           <div class="events">
-            <h2>Upcoming Events</h2>
+            <h2 class="events-header">Upcoming Events</h2>
             <ul class="events-list">
               <li class="events-list__item">
                 <div class="events-list__item--date d-center">
@@ -113,11 +113,15 @@
                 </div>
               </li>
             </ul>
-            <button>Show Calendar </button>
-            <button>Show All </button>
+            <button class="general-button">
+              <p>Show Calendar</p>
+            </button>
+            <button class="general-button">
+              <p>Show All</p>
+            </button>
           </div>
           <div class="news">
-            <h2>News and Announcements</h2>
+            <h2 class="news-header">News and Announcements</h2>
             <div class="news-item first">
               <div class="news-item__img"></div>
               <div class="news-item-text-part">
@@ -145,7 +149,9 @@
               </div>
             </div>
             <hr>
-            <button>Show All</button>
+            <button class="general-button">
+              <p>Show All</p>
+            </button>
           </div>
         </div>
       </div>
@@ -158,12 +164,12 @@
       <div id="album" class="d-center">
         <div class="inner-section">
           <h2 class="album-header">Featured Album</h2>
-          <div class="album-boxes">
-            <button class="album-boxes__item">
+          <div class="album-boxes d-between">
+            <button class="album-boxes__item d-between">
               <div class="album-boxes__item--img"></div>
               <p class="album-boxes__item--text">Our School</p>
             </button>
-            <button class="album-boxes__item">
+            <button class="album-boxes__item d-between">
               <div class="album-boxes__item--img"></div>
               <p class="album-boxes__item--text">School Life</p>
             </button>
@@ -174,9 +180,11 @@
         <div class="inner-section">
           <div class="video-box d-center">
             <div class="video-box__text-part">
-              <h2 class="video-box__text-part--header">Video Highlights</h2>
-              <p>Our School at a Glance</p>
-              <button>Video Gallery</button>
+              <h2 class="video-box__text-part--header">Video <br>Highlights</h2>
+              <p class="video-box__text-part--text">Our School at a Glance</p>
+              <button class="general-button">
+                <p>Video Gallery</p>
+              </button>
             </div>
             <div class="video-box__video-part d-center">
               <video controls poster="/assets/image/video.png" class="video-box__video-part--video">
