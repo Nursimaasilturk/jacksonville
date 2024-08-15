@@ -37,6 +37,11 @@
 }
 @font-face {
 	font-family: 'Minion Pro';
+	src: url('/assets/font/Minion_Pro/MinionPro-Semibold.otf') format('opentype');
+	font-weight: 600;
+}
+@font-face {
+	font-family: 'Minion Pro';
 	src: url('/assets/font/Minion_Pro/MinionPro-Regular.otf') format('opentype');
 	font-weight: 400;
 }
@@ -77,7 +82,7 @@ a{
 	align-items: center;
 	justify-content: space-between;
 }
-.school-header__text--top-text,.school-header__text--bottom-text,.footer-information__logo .top,.footer-information__logo .bottom{
+.school-header__text--top-text,.school-header__text--bottom-text,.footer-information__logo .top,.footer-information__logo .bottom,.parallax-bottom-text{
 	font-family: 'Minion Pro', sans-serif;
 	font-weight: 400;
 }
@@ -102,16 +107,28 @@ a{
 	height: 18px;
 	background-image: url('/assets/image/social-icons.png');
 }
+.login-dropdown::after{
+	content: url('/assets/image/down-arrow.png');
+	vertical-align: middle;
+	margin-left: 5px;
+}
+#login-icon{
+	width: 16px;
+	height: 18px;
+	background-image: url('/assets/image/login.png');
+	background-size: cover;
+	margin-right: 5px;
+}
 #search-icon{
 	width: 18px;
 	height: 18px;
-	fill: var(--primary-color);
+	background-image: url('/assets/image/magnifying-glass.png');
 	margin-right: 5px;
 }
 #translator-icon{
 	width: 20px;
 	height: 20px;
-	fill: var(--primary-color);
+	background-image: url('/assets/image/translator.png');
 	margin-right: 5px;
 }
 .school-header{
@@ -158,10 +175,32 @@ nav{
 	border-radius: 50%;
 }
 .categories__item{
-	padding: 15px 45px;
+	padding: 0px 45px 0px 45px;
+	height: 55px;
+	
 }
 .categories__item a{
+	position: relative;
 	color: var(--white-color);
+	height: 100%;
+	display: grid;
+    place-items: center;
+}
+.categories__item a::after{
+	content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--secondary-color); 
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease; 
+}
+.categories__item a.active::after{
+	transform: scaleX(1);
+	transform-origin: bottom left;
 }
 
 /** MAIN **/
@@ -362,6 +401,8 @@ nav{
 .parallax-top-text{
 	font-size: 16px;
 	letter-spacing: 7px;
+	font-family: 'Minion Pro',sans-serif;
+	font-weight: 600;
 	color:var(--secondary-color);
 	text-transform: uppercase;
 	text-align: center;
