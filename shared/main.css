@@ -49,6 +49,9 @@
 	src: url('/assets/font/Minion_Pro/MinionPro-Regular.otf') format('opentype');
 	font-weight: 400;
 }
+html{
+	font-size: 16px;
+}
 body{
 	margin: 0;
 	padding: 0;
@@ -89,7 +92,7 @@ a{
 	color: var(--primary-color);
 	font-family: 'Montserrat Alternates';
 	font-weight: 600;
-	font-size: 15px;
+	font-size: 0.9375rem;
 	position: relative;
 }
 .general-button p::after{
@@ -120,7 +123,7 @@ a{
 	border-left: 1px solid var(--light-border);
 }
 .toolbar-categories__item a{
-	font-size: 12px;
+	font-size: 0.75rem;
 }
 .toolbar-social-media{
 	display: block;
@@ -161,7 +164,7 @@ a{
 	background-image: url('/assets/image/jacksonville-bg.png');
 	background-size: contain;
 	background-repeat: no-repeat;
-	background-position: center;
+	background-position: center bottom;
 }
 .school-header__logo{
 	width: 164px;
@@ -174,14 +177,14 @@ a{
 
 }
 .school-header__text--top-text{
-	font-size: 100px;
+	font-size: 6.25rem;
 	text-align: right;
 	line-height: 80px;
 	color: var(--primary-color);
 
 }
 .school-header__text--bottom-text{
-	font-size: 52px;
+	font-size: 3.25rem;
 	text-align: right;
 	line-height: 45px;
 	letter-spacing:.6rem;
@@ -212,7 +215,7 @@ nav{
 	height: 100%;
 	display: grid;
     place-items: center;
-	font-size: 20px;
+	font-size: 1.25rem;
 	text-wrap: nowrap;
 }
 .categories__item a::after{
@@ -290,7 +293,7 @@ nav{
 	margin-bottom: 20px;
 	margin-right: 20px;
 	color:var(--white-color);
-	font-size:16px;
+	font-size:1rem;
 	text-wrap: nowrap;
 }
 /** QuickLinks Section END **/
@@ -317,7 +320,7 @@ nav{
 	margin-top: 0;
 }
 .events-header, .news-header,.album-header{
-	font-size: 36px;
+	font-size: 2.25rem;
 	color:var(--primary-color);
 	text-align: left;
 }
@@ -341,21 +344,21 @@ nav{
 	margin-right: 30px;
 }
 .events-list__item--date .tt{
-	font-size: 24px;
+	font-size: 1.5rem;
 	line-height: 14px;
 }
 .events-list__item--date .bt{
-	font-size: 13px;
+	font-size: 0.8125rem;
 	line-height: 14px;
 }
 .events-list__item--header{
-	font-size: 19px;
+	font-size: 1.1875rem;
 	line-height: 21px;
 	color:var(--primary-color);
 	margin: 0;
 }
 .events-list__item--time{
-	font-size:16px;
+	font-size:1rem;
 	line-height: 25px;
 }
 .events-list__item-text-part{
@@ -364,7 +367,7 @@ nav{
 	flex-direction: column;
 	width: 80%;
 }
-.events .general-button:first-child{
+.events .general-button{
 	margin-right: 20px;
 }
 .news-item{
@@ -399,12 +402,12 @@ nav{
 }
 .news-item__header{
 	color: var(--primary-color);
-	font-size: 19px;
+	font-size:  1.1875rem;
 	margin:0 0 20px 0;
 }
 .news-item__desc{
 	color: var(--black-color);
-	font-size: 16px;
+	font-size: 1rem;
 	line-height: 24px;
 }
 .news hr{
@@ -435,7 +438,7 @@ nav{
 	padding-top: 55px;
 }
 .parallax-top-text{
-	font-size: 16px;
+	font-size: 1rem;
 	letter-spacing: 7px;
 	font-family: 'Minion Pro',sans-serif;
 	font-weight: 600;
@@ -444,7 +447,7 @@ nav{
 	text-align: center;
 }
 .parallax-bottom-text{
-	font-size: 70px;
+	font-size: 4.375rem;
 	color:var(--white-color);
 	text-transform:uppercase;
 	text-align: center;
@@ -480,7 +483,7 @@ nav{
 }
 .album-boxes__item--text{
 	margin: auto;
-	font-size: 19px;
+	font-size: 1.1875rem;
 	line-height: 26px;
 	color:var(--primary-color);
 }
@@ -502,12 +505,12 @@ nav{
 	flex-direction: column;
 }
 .video-box__text-part--header{
-	font-size: 36px;
+	font-size: 2.25rem;
 }
 .video-box__text-part--text{
 	font-family: 'Montserrat Alternates';
 	font-weight: 500;
-	font-size: 19px;
+	font-size: 1.1875rem;
 	line-height: 26px;
 }
 .video-box__text-part .general-button p{
@@ -564,10 +567,10 @@ nav{
 	text-transform: uppercase;
 }
 .footer-information__logo .text .top{
-	font-size: 30px;
+	font-size: 1.875rem;
 }
 .footer-information__logo .text .bottom{
-	font-size: 24px;
+	font-size: 1.5rem;
 }
 .footer-information__address-phone{
 	display: flex;
@@ -580,7 +583,7 @@ nav{
 }
 .footer-information__address-phone .info{
 	 color:var(--white-color);
-	 font-size: 16px;
+	 font-size: 1rem;
 	 line-height: 24px;
 	 margin-left: 10px;
 }
@@ -590,7 +593,7 @@ nav{
 	background-image: url("/assets/image/fortilyfy.png");
 }
 .footer-copyright p{
-	font-size:12px;
+	font-size:0.75rem;
 	line-height: 16px;
 	color:var(--black-color);	
 	text-align: center;
@@ -613,3 +616,61 @@ nav{
 	height: 9px;
 }
 /* FOOTER END */
+/* RESPONSIVE DESIGN */
+/** Desktop **/
+@media screen and (max-width:1500px) {
+	html{
+		font-size: 13px;
+	}
+	.inner-section{
+		width: var(--general-space-desktop);
+	}
+	.toolbar-categories__item{
+		padding: 5px 24px;
+	}
+	.school-outer-frame{
+		height: 150px;
+		width: 75%;
+	}
+	.school-header__logo{
+		width: 130px;
+		height: 130px;
+	}
+	.school-header__text--top-text{
+		font-size: 5.5rem;
+		line-height: 50px;
+	} 
+	.school-header__text--bottom-text{
+		font-size: 2.5rem;
+	}
+	.categories__item{
+		height: 40px;
+	}
+	.quick-links-container{
+		padding: 30px;
+	}
+	.quick-links__item{
+		width: 315px;
+	}
+	#news-and-events .inner-section{
+		margin-top: 0;
+		margin-bottom: 20px;
+	}
+	.events .general-button:first-child{
+		margin-right: 20px;
+	}
+	#album .inner-section{
+		width: 53%;
+	}
+	.video-box{
+		height: 432px;
+	}
+}
+/** Tablet **/
+@media screen and (max-width:992px) {
+	
+}
+/** Mobile **/
+@media screen and (max-width:576px) {
+	
+}
