@@ -616,7 +616,9 @@ nav{
 	height: 9px;
 }
 /* FOOTER END */
+
 /* RESPONSIVE DESIGN */
+
 /** Desktop **/
 @media screen and (max-width:1500px) {
 	html{
@@ -668,7 +670,99 @@ nav{
 }
 /** Tablet **/
 @media screen and (max-width:992px) {
-	
+	html{
+		font-size: 13px;
+	}
+	.inner-section,#album .inner-section{
+		width: var(--general-space-tablet);
+	}
+	#header{
+		position: fixed;
+	}
+	.toolbar, nav .inner-section{
+		display: none;
+	}
+	.school-outer-frame {
+		height: auto;
+		width: auto;
+		background-image: none;
+		margin-left: 15px;
+	}
+	.school-outer-frame .inner-section{
+		width: auto;
+	}
+	.school-header__logo{
+		width: 50px;
+		height: 50px;
+	}
+	.school-header__text{
+		margin-left: 10px;
+	}
+	.school-header__text--top-text{
+		font-size: 1.5rem;
+		line-height: 16px;
+		color: var(--white-color);
+		text-align: left;
+	}
+	.school-header__text--bottom-text{
+		font-size: 1rem;
+		line-height: 16px;
+		letter-spacing: 2px;
+		color: var(--white-color);
+		text-align: left;
+	}
+	#hero-banner{
+		height: 400px;
+	}
+	.quick-links-container{
+		margin-top: 10px;
+		border-top: none;
+		padding: 10px 0px;
+	}
+	.quick-links__item{
+		width: 230px;
+	}
+	.quick-links__item-header{
+		width: 40%;
+		height: 100%;
+	}
+	.quick-links__item-header--text {
+		margin: auto;
+	}
+	#news-and-events .inner-section{
+		flex-direction: column;
+	}
+	.events, .news{
+		width: 100%;
+	}
+	.news-item-text-part{
+		width: 80%;
+	}
+	#album{
+	margin-top: 30px;
+    margin-bottom: 40px;
+	}
+	.video-box{
+		height: 270px;
+		margin-bottom: 20px;
+	} 
+	.footer-information__logo .logo{
+		width: 70px;
+		height: 70px;
+		background-size: cover;
+	}
+	.footer-information{
+		height: 90px;
+	}
+	.footer-copyright p{
+		font-size: 1rem;
+		line-height: 18px;
+		text-align: justify;
+		margin: 10px;
+	}
+	.events-header{
+		margin-left: 0px;
+	}
 }
 /** Mobile **/
 @media screen and (max-width:576px) {
