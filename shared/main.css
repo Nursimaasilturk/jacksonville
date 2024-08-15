@@ -250,6 +250,9 @@ nav{
 	height: 100vh;
 	background-color: var(--white-color);
 }
+.mobile-menu{
+	display: none;
+}
 /** Header Section END **/
 
 /* MAIN */
@@ -355,6 +358,7 @@ nav{
 	background-image: url('/assets/image/date-bg.png');
 	background-repeat: no-repeat;
 	background-position: center;
+	background-size: cover;
 	color: var(--primary-color);
 	flex-direction: column;
 	margin-right: 30px;
@@ -607,6 +611,7 @@ nav{
 	width:110px;
 	height: 70px;
 	background-image: url("/assets/image/fortilyfy.png");
+	background-size: cover;
 }
 .footer-copyright p{
 	font-size:0.75rem;
@@ -630,6 +635,12 @@ nav{
 	background-image: url("/assets/image/edunet-logo.png");
 	width: 184px;
 	height: 9px;
+}
+.footer-information-second{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 100px;
 }
 /* FOOTER END */
 
@@ -694,6 +705,9 @@ nav{
 	}
 	#header{
 		position: fixed;
+		z-index: 9;
+		top: 0;
+		left: 0;
 	}
 	.toolbar, nav .inner-section{
 		display: none;
@@ -783,13 +797,140 @@ nav{
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
+		transition: background-color 0.4s ease;
+		padding: 10px 0px;
 	}
 	nav{
 		background-color: transparent;
 		width: max-content;
 	}
+	.scrolled {
+		background-color: white;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+	#header.scrolled nav #mobile-menu-icon{
+		background-image: url('/assets/image/hamburger-menu-dark.png');
+	}
+	#header.scrolled .school-header__text--top-text{
+		color: var(--primary-color);
+	}
+	#header.scrolled .school-header__text--bottom-text{
+		color: var(--secondary-color);
+	}
+	.mobile-menu{
+		display: block;
+	}
+	.footer-information-second{
+		gap: 20px;
+	}
+	.footer-information__brand{
+		width: 80px;
+		height: 50px;
+	}
 }
 /** Mobile **/
 @media screen and (max-width:576px) {
-	
+	.inner-section{
+		width: var(--general-space-mobile);
+	}
+	.footer-information .inner-section{
+		flex-direction: column;
+	}
+	.footer-copyright{
+		background-color: var(--primary-color);
+	}
+	.footer-copyright p{
+		color: var(--white-color);
+	}
+	.footer-information{
+		height: auto;
+		padding: 20px;
+	}
+	.footer-information__logo{
+		width: 100%;
+		justify-content: start;
+	}
+	.footer-information-second{
+		margin-top: 10px;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: start;
+		gap: 10px;
+	}
+	.footer-information__address-phone{
+		width: 100%;
+	}
+	.footer-information__address-phone .yellow-divider{
+		height: 25px;
+	}
+	.footer-information__logo .text{
+		margin-left: 10px;
+	}
+	.footer-landscape {
+		top: -63px;
+	}
+	#mobile-menu-icon {
+		margin-right: 10px;
+	}
+	#hero-banner{
+		height: 300px;
+		border-bottom: 2px solid var(--secondary-color);
+	}
+	#header{
+		padding: 5px;
+	}
+	.quick-links-container{
+		flex-direction: column;
+		gap: 20px;
+	}
+	.events-header,.news-header,.album-header{
+		font-size: 2rem;
+	}
+	#news-and-events .inner-section{
+		padding: 10px;
+	}
+	.events-list__item--date{
+		width: 55px;
+		height: 45px;
+	}
+	.news-item__desc{
+		text-align: justify;
+	}
+	.shade{
+		padding-top: 10px;
+	}
+	.parallax-bottom-text{
+		font-size: 2rem;
+	}
+	#parallax{
+		height: 200px;
+		background-position: center;
+		background-size: cover;
+	}
+	.album-boxes {
+		flex-direction: column;
+		gap: 20px;
+	}
+	.album-boxes__item{
+		width: 300px;
+		height: 270px;
+	}
+	.video-box{
+		flex-direction: column-reverse;
+		height: auto;
+	}
+	.video-box__text-part,.video-box__video-part{
+		width: 100%;
+		padding: 0;
+	}
+	.video-box__text-part--header,.video-box__text-part--text,.general-button{
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+	#mobile-menu-icon{
+		width: 30px;
+		height: 30px;
+	}
 }

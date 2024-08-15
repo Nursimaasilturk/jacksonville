@@ -10,4 +10,13 @@ $(function(){
 			child.addClass('active');	
 		});
 	}
+	$(window).scroll(function() {
+		var header = $("#header");
+		if ($(window).scrollTop() > 0) {
+			console.log(true);
+			header.addClass("scrolled");
+		} else {
+			header.removeClass("scrolled");
+		}
+	});
 });
