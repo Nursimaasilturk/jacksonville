@@ -1,18 +1,22 @@
 <section class="toolbar d-center">
 	<div class="inner-section">
 		<ul class="toolbar-categories d-end">
-			<li class="toolbar-categories__item">
-				<a class="login-dropdown d-center" href="">
+			<li class="toolbar-categories__item login-bar">
+				<a class="login-dropdown d-center" href="#">
 					<span id="login-icon" class="image"></span>
 					LOGIN</a>
+				<div class="login-dropdown-box">
+					<a href="#">REGISTER</a>
+					<a href="#">LOG OUT</a>
+				</div>
 			</li>
 			<li class="toolbar-categories__item">
-				<a href="" class="d-center">
+				<a href="#" class="d-center">
 					<span id="translator-icon"></span>
 					TRANSLATE</a>
 			</li>
 			<li class="toolbar-categories__item">
-				<a href="" class="d-center">
+				<a href="#" class="d-center">
 					<span id="search-icon"></span>
 					SEARCH</a>
 			</li>
@@ -53,17 +57,36 @@
 	</div>
 	<div class="mobile-menu">
 		<button id="mobile-menu-icon"></button>
-		<!-- <div class="mobile-menu-box">
+		<div class="mobile-menu-box">
 			<ul class="mobile-menu-category">
-				<li><a href="">Home</a></li>
-				<li><a href="">Home</a></li>
-				<li><a href="">Home</a></li>
-				<li><a href="">Home</a></li>
-				<li><a href="">Home</a></li>
+				<a id="close-icon"></a>
+				<li class="mobile-menu-category--item"><a href="#"
+						class=" mobile-menu-category--item-link active">Home</a></li>
+				<li class="mobile-menu-category--item"><a href="#" class=" mobile-menu-category--item-link">About</a>
+				</li>
+				<li class="mobile-menu-category--item"><a href="#" class=" mobile-menu-category--item-link">Prospective
+						Families</a></li>
+				<li class="mobile-menu-category--item"><a href="#" class=" mobile-menu-category--item-link">Current
+						Families</a></li>
+				<li class="mobile-menu-category--item"><a href="#"
+						class=" mobile-menu-category--item-link">Academics</a></li>
+				<li class="mobile-menu-category--item"><a href="#" class=" mobile-menu-category--item-link">Contact</a>
+				</li>
+				<hr class="dashed-line">
+				<li class="mobile-menu-category--item">
+					<form action="" class=" mobile-menu-search-form">
+						<input class="mobile-menu-search-form__input" type="text" placeholder="Search now !">
+						<button class="mobile-menu-search-form__btn" type="submit">Search</button>
+					</form>
+				</li>
+				<li class="mobile-menu-category--item"><a href="#"
+						class="mobile-menu-category--item-link user-op">Login</a></li>
+				<li class="mobile-menu-category--item"><a href="#"
+						class="mobile-menu-category--item-link user-op">Register</a></li>
+				<li class="mobile-menu-category--item d-center"><button class="dark-btn">Translate</button><a href="#"
+						class="dark-btn d-center ">f</a></li>
 
-				<li><a href="">Home</a></li>
-				<li><a href="">Home</a></li>
 			</ul>
-		</div> -->
+		</div>
 	</div>
 </nav>
